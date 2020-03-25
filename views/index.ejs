@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+
+<div id="top">
+<% blogs.forEach((blog)=>{ %>
+
+    <div class="ui main container segment">
+        <h2><%= blog.title %></h2>
+        <img src="<%= blog.image %>" class="ui medium bordered image" alt="">
+        <p><strong>Created:</strong><%= String(blog.created).substring(0,15) %></p>
+        <p><%= blog.body.substring(0,100) %>...</p>
+        <button type="button" class="ui black secondary button">
+            <a href="/blogs/<%= blog.id %>">View Full Blog</a>
+        </button>
+        <div class="ui divider"></div>
+    </div>
+    
+<% }) %>
+</div>
+
+<%- include('partials/footer.ejs') %>

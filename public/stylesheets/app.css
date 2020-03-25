@@ -1,0 +1,25 @@
+i.icon{
+    font-size: 2em;
+}
+#smallicon{
+    font-size:1em;
+}
+
+.menu{
+    margin-bottom: 7em;
+}
+.main.container.text{
+    margin-top: 7em;
+}
+
+.ui.segment:first-child {
+    margin-top: 7em;
+}
+
+a{
+    color: whitesmoke;
+}
+
+a:hover{
+    color: white;
+}

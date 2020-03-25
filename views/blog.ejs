@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= blog.title %></div>
+    <button class="ui left attached green button" style="float: left;">
+        <i class="edit icon" id="smallicon"></i>
+        <a href="/blogs/<%= blog.id %>/edit">Edit</a>
+    </button><span>
+    <form action="/blogs/<%= blog.id %>?_method=DELETE" style="float: left; padding-left: 2px;" method="POST">
+        <button class="right attached ui red button">
+            <i class="trash icon" id="smallicon"></i>
+            Delete
+        </button>
+    </form><br><br>
+    <img src="<%= blog.image %>" alt="" class="ui large bordered image"><br>
+
+    <p><span class="ui small header">Created on: </span> <%= String(blog.created).substring(0,15) %></p>
+    <div class="ui divider"></div>
+   
+    <p><%= blog.body %></p>
+    <button type="button" class="ui black secondary button"><a href="/blogs">Go Back</a></button>
+    
+</div>
+
+
+<%- include('partials/footer.ejs') %>
